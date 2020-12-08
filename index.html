@@ -10,15 +10,20 @@
 
 
 <body>
-    <h1 class=" style text-center">Tenter vôtre chance ?</h1>
-    <div class="container">
-<div class='justify-align-content' id="piocheAleatoire"></div>
-<div id="pioche"></div>
-<button type="button" class="btn btn-info" id='pierre'>Pierre</button>
-<button type="button" class="btn btn-info" id='feuille'>Feuille</button>
-<button type="button" class="btn btn-info" id='ciseaux'>Ciseaux</button>
+    <h1 class=" text-center">Tenter vôtre chance ?</h1>
+   
+<div class='text-center' id="piocheAleatoire"></div>
+<div class=" text-center" id="pioche"></div>
 
-    </div>
+<div class="container">
+    <div class='row '>
+<button type="button" class="btn btn-info col" id='pierre'>Pierre</button>
+<button type="button" class="btn btn-info col " id='feuille'>Feuille</button>
+<button type="button" class="btn btn-info col " id='ciseaux'>Ciseaux</button>
+</div></div>
+
+<div class=" text-center" id="resultat"></div>
+    
 
 <script>
     // Afficher mes function 
@@ -30,9 +35,6 @@ clickCiseaux();
 var piocher =['Pierre','Feuille','Ciseaux'];
 
 
-
-    
-
 //*********************************************** FUNCTION CLICKPIERRE
 function clickPierre(){
 // récupérer id pierre = pierre
@@ -40,14 +42,15 @@ var pierre = document.getElementById("pierre");
 // crée un événement au click 
 pierre.addEventListener("click", function () {
 // Afficher lévènement 
-document.getElementById("pioche").innerHTML = "<p>Pierre</p>";
-// pioche aleatoire dans le tableaux 
+document.getElementById("pioche").innerHTML = "<p class='text-center'>Pierre</p>";
+// piocher aleatoire dans le tableaux 
 var aleatoire =Math.floor(Math.random() * piocher.length)
-// crée une div qui génére de façon aléatoire le tableau 
-var generer = document.createElement("p");
 // Afficher le resultat
-document.getElementById("piocheAleatoire").innerHTML = piocher[aleatoire];
-document.getElementById("piocheAleatoire").appendChild(generer);
+document.getElementById("piocheAleatoire").innerHTML = "<p class='text-center'>"+piocher[aleatoire]+"</p>";
+// 
+
+
+
 
 
 });
@@ -60,11 +63,12 @@ var feuille = document.getElementById("feuille");
 // crée un événement au click 
 feuille.addEventListener("click", function () {
 // Afficher lévènement 
-document.getElementById("pioche").innerHTML = "<p>Feuille</p>";
+document.getElementById("pioche").innerHTML = "<p class='text-center'>Feuille</p>";
+// piocher aleatoire dans le tableaux 
 var aleatoire =Math.floor(Math.random() * piocher.length)
-var generer = document.createElement("p");
-document.getElementById("piocheAleatoire").innerHTML = piocher[aleatoire];
-document.getElementById("piocheAleatoire").appendChild(generer);
+// Afficher le resultat
+document.getElementById("piocheAleatoire").innerHTML = "<p class='text-center'>"+piocher[aleatoire]+"</p>";
+
 
 });
 }
@@ -76,11 +80,12 @@ var ciseaux = document.getElementById("ciseaux");
 // crée un événement au click 
 ciseaux.addEventListener("click", function () {
 // Afficher lévènement 
-document.getElementById("pioche").innerHTML = "<p>Ciseaux</p>";
+document.getElementById("pioche").innerHTML = "<p class='text-center'>Ciseaux</p>";
+// piocher aleatoire dans le tableaux 
 var aleatoire =Math.floor(Math.random() * piocher.length)
-var generer = document.createElement("p");
-document.getElementById("piocheAleatoire").innerHTML = piocher[aleatoire];
-document.getElementById("piocheAleatoire").appendChild(generer);
+// Afficher le resultat
+document.getElementById("piocheAleatoire").innerHTML = "<p class='text-center'>"+piocher[aleatoire]+"</p>";
+
 });
 }
 

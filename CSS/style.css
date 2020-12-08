@@ -6,13 +6,20 @@ height: 100px;
 
 #pierre{
     font-size:40px;
+    margin:5px;
+   
 }
 #feuille{
     font-size:40px;
+    margin:5px;
 
 }
 
 #ciseaux{
     font-size:40px;
+    margin:5px;
 
+}
+p{
+    font-size:40px;
 }
