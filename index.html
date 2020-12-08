@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Pierre Feuille Ciseaux </title>
+</head>
+
+
+<body>
+    <h1 class=" style text-center">Tenter vôtre chance ?</h1>
+    <div class="container">
+<div class='justify-align-content' id="piocheAleatoire"></div>
+<div id="pioche"></div>
+<button type="button" class="btn btn-info" id='pierre'>Pierre</button>
+<button type="button" class="btn btn-info" id='feuille'>Feuille</button>
+<button type="button" class="btn btn-info" id='ciseaux'>Ciseaux</button>
+
+    </div>
+
+<script>
+    // Afficher mes function 
+clickPierre();
+clickFeuille();
+clickCiseaux();
+
+//crée un tableaux avec met pioche
+var piocher =['Pierre','Feuille','Ciseaux'];
+
+
+
+    
+
+//*********************************************** FUNCTION CLICKPIERRE
+function clickPierre(){
+// récupérer id pierre = pierre
+var pierre = document.getElementById("pierre");
+// crée un événement au click 
+pierre.addEventListener("click", function () {
+// Afficher lévènement 
+document.getElementById("pioche").innerHTML = "<p>Pierre</p>";
+// pioche aleatoire dans le tableaux 
+var aleatoire =Math.floor(Math.random() * piocher.length)
+// crée une div qui génére de façon aléatoire le tableau 
+var generer = document.createElement("p");
+// Afficher le resultat
+document.getElementById("piocheAleatoire").innerHTML = piocher[aleatoire];
+document.getElementById("piocheAleatoire").appendChild(generer);
+
+
+});
+}
+
+//*********************************************** FUNCTION CLICKFEUILLE
+function clickFeuille(){
+// récupérer id feuille = feuille
+var feuille = document.getElementById("feuille");
+// crée un événement au click 
+feuille.addEventListener("click", function () {
+// Afficher lévènement 
+document.getElementById("pioche").innerHTML = "<p>Feuille</p>";
+var aleatoire =Math.floor(Math.random() * piocher.length)
+var generer = document.createElement("p");
+document.getElementById("piocheAleatoire").innerHTML = piocher[aleatoire];
+document.getElementById("piocheAleatoire").appendChild(generer);
+
+});
+}
+
+//********************************************* FUNCTION CLICKCISEAUX
+function clickCiseaux(){
+// récupérer id ciseaux = ciseaux
+var ciseaux = document.getElementById("ciseaux");
+// crée un événement au click 
+ciseaux.addEventListener("click", function () {
+// Afficher lévènement 
+document.getElementById("pioche").innerHTML = "<p>Ciseaux</p>";
+var aleatoire =Math.floor(Math.random() * piocher.length)
+var generer = document.createElement("p");
+document.getElementById("piocheAleatoire").innerHTML = piocher[aleatoire];
+document.getElementById("piocheAleatoire").appendChild(generer);
+});
+}
+
+
+</script>
+
+
+</body>
+</html>
